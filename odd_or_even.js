@@ -12,6 +12,16 @@ odd_or_even([0, -1, -5])  ==  "even"
 Have fun!
 */
 
-function oddOrEven(array) {
-   //enter code here
+const oddOrEven = (array) => {
+   let answer = 0;
+
+   if(array.length === 0) {
+      return 'even';
+   }
+
+   for(let i = 0; i < array.length; i++) {
+      answer += array[i];
+   }
+
+   return (answer % 2 === 0 ? 'even' : 'odd');
 }
